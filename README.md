@@ -1,7 +1,7 @@
 # Home Automation System
 This is a web application for controlling and analysing the electronic equipments of a room.
 
-[Click here to see the live App](https://shop-tshirts.netlify.com)
+[Click here to see the live App](https://home-automation-system.netlify.app/)
 
 This application is developed in Reactjs.
 
