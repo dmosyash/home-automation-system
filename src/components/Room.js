@@ -3,8 +3,10 @@ import { switches } from './../services/dataService';
 
 /**
  * @name Room
- * @description It is footer of the whole App
- * it contains link to this app's github page and my emailId
+ * @description It is the Room.
+ * it contains 3 electronic equipments.
+ * 2D canvas has been used to show the room and equipments.
+ * When switch is On then that equipment got lit and when its Off it become dark.
  */
  
 

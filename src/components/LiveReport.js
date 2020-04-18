@@ -3,8 +3,9 @@ import { getAppliances, switches } from './../services/dataService';
 
 /**
  * @name LiveReport
- * @description It is footer of the whole App
- * it contains link to this app's github page and my emailId
+ * @description It is Report section of the App
+ * it contains table to show reports of the electric equipments in the room.
+ * It takes data from the dataSevices service file and calculate total energy consumption of the room.
  */
 
 const liveReportStyle = {

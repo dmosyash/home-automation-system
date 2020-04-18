@@ -1,13 +1,13 @@
 const appliancesDetails = {
-    light1: {
+    Light1: {
         energyConsumption: 60,
         status: true
     },
-    light2: {
+    Light2: {
         energyConsumption: 30,
         status: false
     },
-    other: {
+    Other: {
         energyConsumption: 100,
         status: true
     }

@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Home Automation System
+This is a web application for controlling and analysing the electronic equipments of a room.
 
-## Available Scripts
+[Click here to see the live App](https://shop-tshirts.netlify.com)
 
-In the project directory, you can run:
+This application is developed in Reactjs.
 
-### `yarn start`
+## Structure of the App
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The App is developed in ReactJs. It is created with the help of **React cli**. No framework is used for CSS and modeling purpose. Home page of this app is divided into 3 parts
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Live Report
+- Room
+- Settings
 
-### `yarn test`
+#### Live Report
+It always stays on left of the page, this component is called in App component. It is a dumb component, it does not change the state of the Application. It only reads the props.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It has a table in it. Showing the details of all the electronic equipments and calculating the total energy consumption of the room.
 
-### `yarn build`
+#### Room
+This is a dumb component but it has a class. It does not change the state of the application. This component takes input from the App component(parent component) but needed react's life cycle methods to control canvas. This component represents the Room using 2D canvas. The Room has 3 electronic equipments. 2 lights and one other equipment.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When user clicks on/Off button from Settings panel, the equipment gets turn On/Off. When switch is On then that equipment got lit and when its Off it become dark.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Settings
+It is also a dumb component of the Application. It has 3 buttons for 3 switches to the equipments of the room respectively. When user clicks on a buttons, it fire a method of the parent component which is App. That method changes the state of the Application and all the 3 components get re-rendered.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Data Service
+This application has only one service which is dataService. This contains all the equipment details of the room and provide list of switches and status of them at initial state of the application.

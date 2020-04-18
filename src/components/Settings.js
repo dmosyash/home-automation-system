@@ -3,8 +3,8 @@ import { switches } from './../services/dataService';
 
 /**
  * @name Footer
- * @description It is footer of the whole App
- * it contains link to this app's github page and my emailId
+ * @description It is Setting panel of the App
+ * it contains switches to the electronic equipments of the room.
  */
 
 const settingsStyle = {

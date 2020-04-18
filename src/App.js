@@ -4,12 +4,14 @@ import LiveReport from './components/LiveReport';
 import Room from './components/Room';
 import Settings from './components/Settings';
 
-import { initSwitchStatus, switches } from './services/dataService';
+import { initSwitchStatus } from './services/dataService';
 
 /**
  * @name App
  * @description The main component of the app.
- * It contains three parts Header, Route part and Footer
+ * It contains three parts Live Report, Room canvas and Settings buttons
+ * It maintains the state of switches status, means which switch is on or off
+ * It takes the state from initSwitchStatus function of dataService file.
  */
 
 class App extends Component {
